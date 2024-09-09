@@ -1,0 +1,247 @@
+$font-color: #666666;
+$font-color-bold: #42446E;
+$font-black: #000000;
+$transparent: transparent;
+$DM-Sans: "DM Sans";
+$Poppins: "Poppins";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.wrapper {
+	width: 1600px;
+	margin: 0 auto;
+  padding: 41px 177px 60px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 220px;
+}
+
+.logo {
+  width: 97px;
+}
+.navigation {
+  display: flex;
+  gap: 51px;
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type:none;
+    gap: 60px;
+  }
+   &__link {
+    font-family: "DM Sans";
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: 500;
+    font-size: 20px;
+  }
+  &__icons {
+    margin-top: 4px;
+    gap: 20px;
+  }
+  &__icon_twitter{
+    margin-top: -1px;
+    width: 30px;
+  }
+}
+.greeting {
+	margin-bottom: 348px;
+  display: flex;
+  justify-content: space-between;
+
+  &__content {
+    margin-top: 45px;
+    max-width: 636px;
+  }
+
+  &__text {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 70px;
+  color: $font-color-bold;;
+  }
+  &__text_gradient {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 70px;
+    color: $transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, rgba(19,176,245,1) 0%, rgba(202,36,180,1) 100%);
+  }
+  &__photo {
+    margin: 10px -9px -27px 0;
+    width: 367px;
+  }
+}
+
+.tech-stack {
+	h2 {
+		margin-bottom: 49px;
+	}
+	h3 {
+		margin-bottom: 140px;
+	}
+  &__icons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    row-gap: 67px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 214px;
+  }
+}
+
+.title {
+  font-family: $Poppins;
+  font-weight: 700;
+  font-size: 48px;
+  color: $font-color-bold;
+  line-height: 26px;
+  text-align: center;
+}
+.subtitle {
+  font-family: $Poppins;
+  font-weight: 400;
+  font-size: 32px;
+  color: $font-color;
+  line-height: 26px;
+  text-align: center;
+}
+
+.projects {
+  margin-bottom: 225px;
+  &__title {
+    margin-bottom: 49px;
+  }
+  &__subtitle {
+    margin-bottom: 96px;
+  }
+}
+
+.project__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  justify-items: center;
+  row-gap: 62px;
+}
+
+.card {
+	border-radius: 20px;
+	width: 373px;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
+
+  &__content {
+    padding: 27px 28px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 17px;
+  }
+  &__description {
+    font-family: $Poppins;
+    color: $font-color;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: start;
+    margin-bottom: 12px;
+  }
+  &__skills {
+    font-family: $Poppins;
+    color: $font-color-bold;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 21px;
+  }
+  &__links {
+    display: flex;
+  }
+  &__link {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 48px;
+    height: 26px;
+  }
+  &__icon-picture{
+    width: 20px;
+  }
+  
+  &__text-link {
+    font-family: "Poppins";
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+footer {
+  padding-bottom: 60px;
+}
+
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation_footer {
+	display: flex;
+	justify-content: space-between;
+  gap: 60px;
+}
+.navigation__link_footer {
+		font-family: $DM-Sans;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 26px;
+		color: $font-color-bold;
+    text-decoration: none;
+	
+}
+.divider {
+	margin: 53px auto;
+}
+.copyright {
+	font-family: $Poppins;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 26px;
+	color: $font-color;
+}
+.gradient {
+	color: $transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(90deg, rgba(114,103,211,1) 0%, rgba(230,16,171,1) 100%);
+}
