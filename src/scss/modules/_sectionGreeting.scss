@@ -1,0 +1,53 @@
+@import './modules/variables';
+
+.greeting {
+	margin-bottom: 348px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__content {
+    max-width: 636px;
+  }
+  &__text {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: clamp(18px, calc(18px + (58 - 18) * ((100vw - 320px) / (1399 - 320))), 58px);
+  line-height: clamp(22px, calc(22px + (70 - 22) * ((100vw - 320px) / (1399 - 320))), 70px);
+  color: $font-color-bold;;
+  }
+  &__text_gradient {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: clamp(18px, calc(18px + (58 - 18) * ((100vw - 320px) / (1399 - 320))), 58px);
+    line-height: clamp(22px, calc(22px + (70 - 22) * ((100vw - 320px) / (1399 - 320))), 70px);
+    color: $transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, rgba(19,176,245,1) 0%, rgba(202,36,180,1) 100%);
+  }
+  &__photo {
+    width: clamp(74px, calc(74px + (367 - 74) * ((100vw - 320px) / (1600 - 320))), 367px);
+    height: clamp(74px, calc(74px + (367 - 74) * ((100vw - 320px) / (1600 - 320))), 367px);
+  }
+}
+
+@media (max-width: 1399px) {
+  .greeting {
+    margin-bottom: 250px;
+  }
+}
+
+@media (max-width: 991px) {
+  .greeting {
+    greeting {
+      margin-bottom: 150px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .greeting {
+    margin-bottom: 75px;
+  }
+}

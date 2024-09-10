@@ -2,6 +2,15 @@ import { techStackIcons, card } from "./modules/data.js";
 
 const techStackList = document.querySelector(".tech-stack__icons");
 const projectCards = document.querySelector(".project__cards");
+const burger = document.querySelector(".burger");
+const navigation = document.querySelector(".navigation");
+
+function isActive() {
+  this.classList.toggle("active");
+  navigation.classList.toggle("open");
+}
+
+burger.addEventListener("click", isActive);
 
 techStackIcons.forEach((icon) => {
   const img = document.createElement("img");
