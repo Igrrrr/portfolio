@@ -1,39 +1,16 @@
-@use './mixins' as *;
-@import './modules/variables';
-
 footer {
-  @include container(203px, 0, 60px);
-}
-
-.footer__container {
-  @include container(0, 180px);
-  max-width: 1600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__top {
-  padding-bottom: 42px;
-  width: 100%;
-}
-
-.footer__logo {
-  display: flex;
-  flex-grow: 1;
-}
-
-.footer__bottom {
-  padding-top: 60px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding-bottom: 60px;
 }
 
 .navigation_footer {
+  width: 100%;
   display: flex;
   gap: 60px;
+
+  > a {
+    display: flex;
+    flex-grow: 1;
+  }
 }
 
 .navigation__link_footer {
@@ -51,14 +28,15 @@ footer {
   }
 }
 
-.devider {
-  height: 3px;
-  width: 100%;
-  background-color: $font-color;
+.divider {
+	margin: clamp(13px, calc(13px + (53 - 13) * ((100vw - 320px) / (1600 - 320))), 53px) auto;
+  width: clamp(300px, calc(300px + (1210 - 300) * ((100vw - 320px) / (1600 - 320))), 1210px);
 }
 
-.navigation__links_footer {
-  gap: 50px;
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .copyright {
@@ -76,134 +54,51 @@ footer {
   background-image: linear-gradient(90deg, rgba(114,103,211,1) 0%, rgba(230,16,171,1) 100%);
 }
 
-@media (max-width: 1600px) {
-
-  .footer__container {
-    @include container(0, 100px);
-  }
-}
-
-@media (max-width: 1399px) {
-
-  .footer__container {
-    @include container(0, 50px)
-  }
-
-  .navigation__links_footer {
-    gap: 20px;
-  }
-
-  .navigation__link_footer {
-    font-size: 1em;
-  }
-
-  .copyright {
-    font-size: 1em;
-  }
-}
-
 @media (max-width: 991px) {
-
-  footer {
-    @include container (100px, 0, 30px);
-
-    &__container {
-      @include container(0, 50px);
-    }
-  
-    &__top {
-      padding-bottom: 30px;
-    }
-  
-    &__bottom {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
-  
-  .footer__bottom {
+  .footer_bottom {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
-  
-
-  .navigation__links_footer {
-    padding-top: 15px;
-    gap: 20px;
-  }
-
-  .navigation__link_footer {
-    font-size: 1.1em;
-  }
-
-  .copyright {
-    font-size: 0.9em;
-    padding-bottom: 15px;
+    gap: 30px;
   }
 }
 
 @media (max-width: 767px) {
-
-  .footer__container {
-    @include container(0, 15px);
+  footer {
+    padding-bottom: 30px;
   }
+ 
+    .navigation_footer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 0;
 
-  .footer__logo.logo {
-    width: 50px;
+      > a { 
+        grid-area: 1 / 1 / 2 / 2; 
+        margin-left: 2rem;
+      }
+      > ul.navigation__links.navigation__icons {
+        grid-area: 1 / 2 / 2 / 3; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      > ul.navigation__links { 
+        grid-area: 2 / 1 / 3 / 3; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px;
+      }
   }
-
-  .navigation__icon, .navigation__icon_twitter {
-    width: 30px;
-  }
-
-  .navigation_footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 0;
-
-    > .footer__logo { 
-      grid-area: 1 / 1 / 2 / 2; 
-      margin-left: 2rem;
-    }
-
-    > .navigation__links.navigation__icons_footer {
-      grid-area: 1 / 2 / 2 / 3; 
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      gap: 20px;
-    }
-
-    > .navigation__links { 
-      grid-area: 2 / 1 / 3 / 3; 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 10px;
-    }
-  }
-
-  .footer__bottom {
-    @include container(0, 15px);
+  .footer_bottom {
     display: flex;
     flex-direction: column;
-    gap: 10px;
   }
-
-  .navigation__links_footer {
-   padding-top: 15px;
-    gap: 20px;
-  }
-
   .navigation__link_footer {
-    font-size: 0.6em;
+    font-size: 14px;
   }
-
   .copyright {
-    font-size: 10px;
-    padding-bottom: 15px;
+    font-size: 11px;
   }
 }
