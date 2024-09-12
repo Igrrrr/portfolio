@@ -1,14 +1,19 @@
+@use './mixins.scss' as *;
 @import './modules/variables';
 
-.open {
-  display: flex !important;
+header {
+  padding-top: 40px;
 }
 
-header {
+.header__container {
+  @include container(0, 177px);
   display: flex;
   justify-content: space-between;
-  margin-bottom: 220px;
 }
+
+// .open {
+//   display: flex !important;
+// }
 
 .logo {
   width: 97px;
@@ -26,6 +31,7 @@ header {
     list-style-type:none;
     gap: 60px;
   }
+
   &__link {
   font-family: "DM Sans";
   text-decoration: none;
@@ -33,14 +39,17 @@ header {
   font-weight: 500;
   font-size: 20px;
   }  
+
   &__icons {
     margin-top: 4px;
-    gap: 20px;
+    gap: 30px;
   }
+
   &__icon_twitter{
   margin-top: -1px;
   width: 30px;
   }
+
   &__link:hover, &__icon:hover, &__icon_twitter:hover  {
     display: inline-block;
     transition: transform 0.3s ease;
@@ -74,53 +83,51 @@ header {
     background: linear-gradient(90deg, rgba(19,176,245,1) 0%, rgba(202,36,180,1) 100%);
     transition: all 0.3s ease 0s;
   }
+
   &::before {
     top: 0
   }
+
   &::after {
     bottom: 0
   }
+
   &.active span {
     transform: scale(0)
   }
+
   &.active::before {
   top: 50%;
   transform: rotate(-45deg) translate(0, -50%);
   }
+
   &.active::after {
     bottom: 50%;
     transform: rotate(45deg) translate(0, 50%);
   }
 }
 
+@media (max-width: 1600px) {
+  .header__container {
+    @include container(0, 100px)
+  }
+}
+
 @media (max-width: 1399px) {
-  header {
-    margin-bottom: 150px;
-  }
-  .logo {
-    width: 97px;
-  }
-  .navigation {
-    gap: 30px;
-    &__links {
-      gap: 20px;
-    }
-    &__icons {
-      margin-top: 2px;
-      gap: 5px;
-    }
-    &__icon_twitter{
-      margin-top: -1px;
-      width: 30px;
-    }
-  }
+ .navigation__links {
+  gap: 20px
+ }
 }
 
 @media (max-width: 992px) {
   header {
-    margin-bottom: 100px;
+    padding-top: 40px;
   }
 
+  .header__container {
+    @include container(0, 40px);
+  }
+ 
   .logo {
     width: 75px;
   }
@@ -131,9 +138,11 @@ header {
     &__links {
       gap: 20px;
     }
+
     &__link {
       font-size: 18px;
     }
+    
     &__icons {
       gap: 15px;
     }
@@ -142,45 +151,40 @@ header {
 
 @media (max-width: 767px) {
   header {
-    margin-bottom: 75px;
+    padding-top: 15px;
   }
-
+  .header__container {
+    @include container(0, 15px, 0);
+  }
+ 
   .logo {
     width: 50px;
   }
-  .navigation {
-    display: none;
-  
-    &__links {
-      gap: 10px;
-    }
-    &__icons {
-      margin-top: 2px;
-      gap: 5px;
-    }
-    &__icon_twitter{
-      margin-top: -1px;
-      width: 30px;
-    }
+
+  .burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
   }
 
-  .burger {display: flex;}
-
   .navigation {
-    display: none;
+
     flex-direction: column;
     position: fixed;
-    height: 100%;
-    width: 100%;
+    z-index: 40;
     top: 0;
-    bottom: 0;
-    left: 0;
     right: 0;
-    z-index: 50;
-    overflow-y: auto;
-    padding: 50px 40px;
-    background-color: $font-color-bold;
+    width: 40%;
+    height: 100vh;background-color: $font-color-bold;
+    padding: 129px 27px 50px 57px;
+    transform: translate3d(100%, 0, 0);
+    transition: transform .7s cubic-bezier(.22,1,.36,1);
 
+    &.open {
+      transform: translate3d(0, 0, 0);
+  }
+      
     &__link {
       color: $font-white;
     } 
@@ -190,5 +194,29 @@ header {
       flex-direction: column;
       row-gap: 30px;
     }
+  
+    &__links {
+      gap: 10px;
+    }
+
+    &__link {
+      color: $font-white;
+    } 
+
+    &__icons {
+      margin-top: 2px;
+      gap: 15px;
+      width: 30px;
+    }
+
+    &__icon, &__icon_twitter{
+      margin-top: -1px;
+      width: 40px;
+      height: 40px;
+    }
   }
+
+//   .navigation.open {
+//     transform: translate3d(0, 0, 0);
+// }
 }
