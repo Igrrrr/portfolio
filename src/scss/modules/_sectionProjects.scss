@@ -1,8 +1,5 @@
-@use './mixins.scss' as *;
-@import './modules/variables';
-
 .projects {
-  padding-top: 214px; 
+  padding-top: 214px;
 
   &__subtitle {
     padding-top: 50px;
@@ -12,25 +9,26 @@
     padding-top: 96px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    justify-items: center;
-    width: min-content;
     margin: 0 auto;
-    gap: 50px 60px;
+    gap: 5%;
   }
 }
 
 .card {
 	border-radius: 20px;
-	max-width: 373px;
 	display: flex;
 	flex-direction: column;
 	-webkit-box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
 	box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
 
-  &__content {
-    padding: 27px 28px 25px;
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__specification {
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,19 +63,23 @@
   }
 
   &__links {
+    width: 100%;
     display: flex;
-    gap: 7px;
   }
 
   &__link {
     display: flex;
+    width: 100%;
     align-items: center;
     gap: 10px;
-    margin-right: 40px;
     height: 26px;
   }
 
-  &__text-link:hover  {
+  &__text-link {
+    text-decoration: underline;
+  }
+
+  &__text-link:hover {
     display: inline-block;
     transition: transform 0.3s ease;
     transform: scale(1.1)
@@ -96,8 +98,14 @@
   }
 }
 
+@media (max-width: 1599px) {
+  .projects__cards {
+    padding: 5% 5%;
+  }
+}
+
 @media (max-width: 1399px) {
-  .projects{
+  .projects {
     padding-top: 200px;
   }
 }
@@ -122,44 +130,27 @@
   }
 
   .projects__cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px
-  }
-
-  .card {
-
-    &__content {
-      @include container(15px);
-    }
+    gap: 5%
   }
 }
 
 @media (max-width: 767px) {
-  
   .projects{
-    padding-top: 45px;
-
-    &__container {
-      @include container(0, 15px);
-    }
-
     &__title {
       font-size: 1.3em;
     }
     &__subtitle {
-      font-size: 0.8em;
+      font-size: 1em;
       padding-top: 20px;
     }
   }
 
   .projects__cards {
-    padding-top: 40px;
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 1rem;
+    row-gap: 5vh;
   }
 
   .card {
-    max-width: 290px;
     &__title {
       font-size: 22px;
     }
@@ -179,7 +170,5 @@
     &__text-link {
       font-size: 12px;
     }
-    
-    &__content {padding: 15px;}
   }
 }

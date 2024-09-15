@@ -1,7 +1,6 @@
-@use './mixins.scss' as *;
-
 .tech-stack {
   padding-top: 318px;
+
 	h3 {
 		padding-top: 50px;
 	}
@@ -29,6 +28,7 @@
   line-height: 26px;
   text-align: center;
 }
+
 .subtitle {
   font-family: $Poppins;
   font-weight: 400;
@@ -38,13 +38,9 @@
   text-align: center;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1599px) {
   .tech-stack {
     padding-top: 220px;
-
-    &__container {
-      @include container(0, 100px);
-    }
 
     &__icons {
       width: 100%;
@@ -56,11 +52,7 @@
   .tech-stack {
     padding-top: 200px;
 
-    &__container {
-      @include container(0, 80px);
-    }
-    
-    &__icons {
+     &__icons {
       gap: 40px 4%;
     }
   }
@@ -91,18 +83,14 @@
 
 @media (max-width: 767px) {
   .tech-stack {
-    padding-top: 35px;
-
-    &__container {
-      @include container(0, 15px);
-    }
+    padding-top: 55px;
 
     .title {
       font-size: 1.3em;
     }
 
     .subtitle {
-      font-size: 0.8em;
+      font-size: 1em;
       padding-top: 20px;
     }
     

@@ -1,56 +1,54 @@
-@use './mixins.scss' as *;
 @import './modules/variables';
 
 header {
   padding-top: 40px;
 }
 
-.header__container {
-  @include container(0, 177px);
-  display: flex;
-  justify-content: space-between;
+.wrapper {
+  max-width: $wrapper-max-width;
+  padding: 0 177px;
+  margin: 0 auto;
 }
 
-// .open {
-//   display: flex !important;
-// }
+.header__content {
+  display: flex;
+  justify-content: space-between
+}
 
-.logo {
-  width: 97px;
+.open {
+  display: flex !important;
 }
 
 .navigation {
   display: flex;
+  justify-content: space-between;
   gap: 51px;
 
   &__links {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    list-style-type:none;
     gap: 60px;
   }
 
   &__link {
-  font-family: "DM Sans";
-  text-decoration: none;
-  color: var(--font-color);
-  font-weight: 500;
-  font-size: 20px;
+    font-family: $DM-Sans;
+    color: $font-color;
+    font-weight: 500;
+    font-size: 20px;
   }  
 
   &__icons {
-    margin-top: 4px;
-    gap: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   &__icon_twitter{
-  margin-top: -1px;
-  width: 30px;
+    margin-top: -1px;
+    width: 30px;
   }
 
-  &__link:hover, &__icon:hover, &__icon_twitter:hover  {
+  :is(&__link, &__icon, &__icon_twitter):hover  {
     display: inline-block;
     transition: transform 0.3s ease;
     transform: scale(1.1)
@@ -59,7 +57,9 @@ header {
 
 .burger {
   display: none;
-  position: relative;
+  position: fixed;
+  right: 20px;
+  top: 20px;
   z-index: 50;
   align-items: center;
   justify-content: flex-end;
@@ -67,6 +67,7 @@ header {
   height: 18px;
 
   span {
+    position: absolute;
     height: 3px;
     width: 80%;
     border-radius: 10px;
@@ -97,8 +98,8 @@ header {
   }
 
   &.active::before {
-  top: 50%;
-  transform: rotate(-45deg) translate(0, -50%);
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
   }
 
   &.active::after {
@@ -107,25 +108,21 @@ header {
   }
 }
 
-@media (max-width: 1600px) {
-  .header__container {
-    @include container(0, 100px)
+@media (max-width: 1599px) {
+  .wrapper {
+    padding: 0 100px;
   }
 }
 
 @media (max-width: 1399px) {
  .navigation__links {
-  gap: 20px
+    gap: 20px
  }
 }
 
 @media (max-width: 992px) {
-  header {
-    padding-top: 40px;
-  }
-
-  .header__container {
-    @include container(0, 40px);
+  .wrapper {
+    padding: 0 40px;
   }
  
   .logo {
@@ -140,7 +137,7 @@ header {
     }
 
     &__link {
-      font-size: 18px;
+      font-size: 1.1em;
     }
     
     &__icons {
@@ -153,60 +150,53 @@ header {
   header {
     padding-top: 15px;
   }
-  .header__container {
-    @include container(0, 15px, 0);
+
+  .wrapper {
+    padding: 0 15px;
   }
  
-  .logo {
-    width: 50px;
-  }
-
   .burger {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: auto 0;
   }
 
-  .navigation {
-
+  .navigation_burger {
     flex-direction: column;
+    justify-content: flex-start;
     position: fixed;
     z-index: 40;
     top: 0;
     right: 0;
     width: 40%;
-    height: 100vh;background-color: $font-color-bold;
+    height: 100%;
+    background-color: $font-color-bold;
     padding: 129px 27px 50px 57px;
     transform: translate3d(100%, 0, 0);
     transition: transform .7s cubic-bezier(.22,1,.36,1);
 
     &.open {
       transform: translate3d(0, 0, 0);
+      padding: 0;
   }
       
-    &__link {
-      color: $font-white;
-    } 
-
-    ul {
-      margin: auto;
-      flex-direction: column;
-      row-gap: 30px;
-    }
-  
     &__links {
-      gap: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 70px 20px 0;
     }
 
     &__link {
+      font-size: 1em;
       color: $font-white;
     } 
 
     &__icons {
-      margin-top: 2px;
-      gap: 15px;
-      width: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 70px;
+      margin: 0 auto;
+      gap: 20px;
     }
 
     &__icon, &__icon_twitter{
@@ -214,9 +204,11 @@ header {
       width: 40px;
       height: 40px;
     }
-  }
 
-//   .navigation.open {
-//     transform: translate3d(0, 0, 0);
-// }
+    &__link:hover, &__icon:hover, &__icon_twitter:hover  {
+      display: inline-block;
+      transition: transform 0.3s ease;
+      transform: scale(1.1)
+    }
+  }
 }

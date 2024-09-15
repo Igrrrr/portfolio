@@ -1,26 +1,24 @@
-@use './mixins.scss' as *;
 @import './modules/variables';
 
 .greeting {
   padding-top: 220px;
 
-  &__container {
-    @include container(0, 177px);
+  &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__content {
+  &__message {
     max-width: 636px;
   }
 
   &__text {
-  font-family: "Poppins";
-  font-weight: 700;
-  font-size: 58px;
-  line-height: 1.2em;
-  color: $font-color-bold;;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 1.2em;
+    color: $font-color-bold;;
   }
 
   &__text_gradient {
@@ -36,32 +34,30 @@
   }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1599px) {
   .greeting {
     padding-top: 200px;
-
-    &__container {
-      @include container(0, 100px);
-    }
   }
 }
 
 @media (max-width: 1399px) {
  .greeting {
-    &__text {
-      font-size: 2.5em;
-    }
+    padding-top: 100px;
 
-    &__photo {
-      width: 300px;
-      height: 300px;
-    }
+  &__text {
+    font-size: 2.5em;
+  }
+
+  &__photo {
+    width: 300px;
+    height: 300px;
+  }
  }
 }
 
 @media (max-width: 991px) {
   .greeting {
-    padding-top: 120px;
+
     &__text {
       font-size: 2em;
       line-height: 1.2em;
@@ -76,11 +72,6 @@
 
 @media (max-width: 767px) {
   .greeting {
-    margin-top: 35px;
-
-    &__container {
-      @include container(0, 15px);
-    }
 
     &__text {
       font-size: 1.5em;
@@ -97,15 +88,15 @@
 
 @media (max-width: 448px) {
   .greeting {
+    padding-top: 55px;
 
     &__text {
       font-size: 1em;
-      //line-height: 1.2em;
     }
 
     &__photo {
-      width: 74px;
-      height: 74px;
+      width: 100px;
+      height: 100px;
     }
   }
 }

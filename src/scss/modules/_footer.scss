@@ -1,39 +1,30 @@
-@use './mixins' as *;
 @import './modules/variables';
 
 footer {
-  @include container(203px, 0, 60px);
-}
-
-.footer__container {
-  @include container(0, 180px);
-  max-width: 1600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  padding: 200px 0 60px;
 }
 
 .footer__top {
-  padding-bottom: 42px;
-  width: 100%;
-}
-
-.footer__logo {
   display: flex;
-  flex-grow: 1;
+  justify-content: space-between;
 }
 
 .footer__bottom {
-  padding-top: 60px;
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-top: 60px;
 }
 
-.navigation_footer {
-  display: flex;
-  gap: 60px;
+.navigation__icons_footer {
+  gap: 20px;
+}
+
+.line {
+  content: '';
+  height: 3px;
+  width: 100%;
+  background-color: $font-color;
+  margin-top: 42px;
 }
 
 .navigation__link_footer {
@@ -51,16 +42,6 @@ footer {
   }
 }
 
-.devider {
-  height: 3px;
-  width: 100%;
-  background-color: $font-color;
-}
-
-.navigation__links_footer {
-  gap: 50px;
-}
-
 .copyright {
   font-family: $Poppins;
   font-weight: 400;
@@ -76,17 +57,19 @@ footer {
   background-image: linear-gradient(90deg, rgba(114,103,211,1) 0%, rgba(230,16,171,1) 100%);
 }
 
-@media (max-width: 1600px) {
-
-  .footer__container {
-    @include container(0, 100px);
+@media (max-width: 1599px) {
+  footer {
+    padding-top: 100px;
   }
 }
 
 @media (max-width: 1399px) {
+  footer {
+    padding: 200px 0 30px;
+  }
 
-  .footer__container {
-    @include container(0, 50px)
+  .wrapper {
+    padding: 0 50px;
   }
 
   .navigation__links_footer {
@@ -103,107 +86,93 @@ footer {
 }
 
 @media (max-width: 991px) {
-
   footer {
-    @include container (100px, 0, 30px);
+    padding: 300px 0 30px;
 
-    &__container {
-      @include container(0, 50px);
-    }
-  
     &__top {
       padding-bottom: 30px;
     }
-  
-    &__bottom {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+
+    .wrapper {
+      padding: 0 15px;
     }
   }
-  
+
   .footer__bottom {
-    display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    align-items: center;
+    margin: 15px auto;
   }
   
-
   .navigation__links_footer {
-    padding-top: 15px;
     gap: 20px;
   }
 
   .navigation__link_footer {
-    font-size: 1.1em;
+    font-size: 0.8em;
   }
 
   .copyright {
-    font-size: 0.9em;
-    padding-bottom: 15px;
+    font-size: 0.8em;
   }
 }
 
 @media (max-width: 767px) {
-
-  .footer__container {
-    @include container(0, 15px);
+  footer {
+    padding: 70px 0 30px;
   }
 
-  .footer__logo.logo {
-    width: 50px;
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .navigation_footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navigation__links_footer {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   .navigation__icon, .navigation__icon_twitter {
     width: 30px;
   }
 
-  .navigation_footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 0;
-
-    > .footer__logo { 
-      grid-area: 1 / 1 / 2 / 2; 
-      margin-left: 2rem;
-    }
-
-    > .navigation__links.navigation__icons_footer {
-      grid-area: 1 / 2 / 2 / 3; 
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      gap: 20px;
-    }
-
-    > .navigation__links { 
-      grid-area: 2 / 1 / 3 / 3; 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 10px;
-    }
-  }
-
-  .footer__bottom {
-    @include container(0, 15px);
+  .footer_bottom {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
 
   .navigation__links_footer {
-   padding-top: 15px;
+    padding-top: 15px;
+    margin: 0 auto;
     gap: 20px;
+  }
+  .navigation__icons_footer {
+    margin: 0 auto;
   }
 
   .navigation__link_footer {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 
   .copyright {
-    font-size: 10px;
+    font-size: 0.6em;
     padding-bottom: 15px;
   }
 }
