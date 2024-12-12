@@ -1,0 +1,37 @@
+header.header 
+  .container.header__container
+    a.header__logo-link
+      p.header__logo
+        |.i.k
+    nav.nav
+      input.burger__toggle#burger-toggle(type="checkbox")
+      label.burger(for="burger-toggle")
+        .burger__switch
+          span.burger__switch_big-symbol 
+            |[
+          p.burger__switch_open 
+            |opn
+          p.burger__switch_close 
+            |cls
+          span.burger__switch_big-symbol
+            |]
+      ul.nav__list 
+      a.nav__item(href="about")
+        li.nav__link
+          |About 
+      a.nav__item(href="skills")
+        li.nav__link 
+          |Skills
+      a.nav__item(href="projects")
+        li.nav__link
+          |Projects
+      a.nav__item(href="contacts")
+        li.nav__link
+          |Contacts
+    ul.header__external-links 
+      li.header__external-item
+        a.header__external-link(href="#")
+          img.header__external-icon(src="", alt="github")
+      li.header__external-item 
+        a.header__external-link(href="#")
+          img.header__external-icon(src="", alt="hh")

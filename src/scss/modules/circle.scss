@@ -1,0 +1,21 @@
+// @mixin circle-gradient(
+//   $gradient-type: none,
+//   $size: auto,
+//   $filter: none,
+//   $gradient-colors: null
+// ) {
+//   position: absolute;
+//   border-radius: 50%;
+//   width: $size;
+//   height: $size;
+//   filter: $filter;
+//   @if $gradient-type == radial {
+//     background: radial-gradient(95.38% 95.38% at 50.77% 4.62%, #DEA8FF 0%, #9D6AD9 44.51%, #7A2BF6 100%);
+//   } @else if $gradient-type == radial-blue {
+//     background: radial-gradient(63.25% 73.53% at 65.32% 77.65%, #045DFA 0%, #0FC1D7 83.16%, #06F6C7 100%);
+//   } @else if $gradient-type == linear {
+//     background: linear-gradient(170.98deg, rgba(95, 56, 255, 0.25) 25.59%, rgba(255, 14, 222, 0.25) 100.44%);
+//   } @else if $gradient-type == linear-green {
+//     background: linear-gradient(170.98deg, rgba(195, 243, 58, 0.25) 25.59%, rgba(41, 209, 89, 0.25) 100.44%);
+//   }
+// }

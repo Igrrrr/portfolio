@@ -1,0 +1,138 @@
+// .hero {
+//   background-color: $background;
+//   color: $color-white;
+//   padding: 100px 0 270px;
+
+ 
+//   &__container {
+//     position: relative;
+//   }
+  
+//   &__title {
+//     position: relative;
+//     padding-top: 118px;
+//     font-size: 72px;
+//     font-weight: 400;
+//     line-height: 75.6px;
+//     letter-spacing: -0.03em;
+//     z-index: 1;
+//     opacity: 0;
+//     transform: scale(0.9);
+//     animation: appearance 1.5s forwards 0.5s;
+//   }
+
+//   &__img {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     width: 863px;
+//     opacity: 0;
+//     animation: appearance 1.5s forwards 2.2s;
+//     transform: translateY(20px);
+//   }
+
+//   &__description {
+//     margin-top: 20px;
+//     opacity: 0;
+//     animation: appearance 1.5s forwards 1.5s;
+//   }
+
+//   &__button {
+//     margin-top: 67px;
+//     opacity: 0;
+//     animation: appearance 1.5s forwards 1.5s;
+//   }
+// }
+
+// @keyframes appearance {
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+// @keyframes emersion {
+//   to {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+// }
+
+// @media(width <= 1399px) {
+//   .hero {
+//     &__img {
+//       max-width: 700px;
+//     }
+//   }
+// }
+
+// @media(width <= 1199px) {
+//   .hero {
+//     &__title {
+//       font-size: 3rem;
+//       line-height: 3rem;
+//     }
+
+//     &__img {
+//       max-width: 600px;
+//     }
+//   }
+// }
+
+// @media(width <= 991px) {
+//   .hero {
+//     &__container {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//     }
+
+//     &__img {
+//       position: relative;
+//       margin-top: 2rem;
+//     }
+//   }
+// }
+
+// @media(width <= 767px) {
+//   .hero {
+//     padding: 105px 0 50px;
+
+//     &__title {
+//       padding-top: 0;
+//     }
+
+//     &__img {
+//       max-width: 500px;
+//     }
+  
+//     &__button {
+//       margin-top: 40px;
+//     }
+//   }
+// }
+
+// @media(width <= 575px) {
+//   .hero {
+//     &__title {
+//       text-align: center;
+//       font-size: 1.5rem;
+//       line-height: 2.5rem;
+//     }
+
+//     &__img {
+//       max-width: 300px;
+//     }
+
+//     &__description {
+//       font-size: 18px;
+//       line-height: 1.5rem;
+//       text-align: center;
+//       padding: 0 1.5rem;
+//     }
+
+//     &__btn {
+//       padding: 15px 25px;
+//     }
+//   }
+// }
