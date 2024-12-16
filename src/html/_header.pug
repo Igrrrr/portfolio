@@ -2,7 +2,8 @@ header.header
   .container.header__container
     a.header__logo-link
       p.header__logo
-        |.i.k
+        //- |.i.k
+        |[/<]
     nav.nav
       input.burger__toggle#burger-toggle(type="checkbox")
       label.burger(for="burger-toggle")
@@ -16,22 +17,22 @@ header.header
           span.burger__switch_big-symbol
             |]
       ul.nav__list 
-      a.nav__item(href="about")
         li.nav__link
+          a.nav__item(href="about")
           |About 
-      a.nav__item(href="skills")
         li.nav__link 
+          a.nav__item(href="skills")
           |Skills
-      a.nav__item(href="projects")
         li.nav__link
+          a.nav__item(href="projects")
           |Projects
-      a.nav__item(href="contacts")
         li.nav__link
+          a.nav__item(href="contacts")
           |Contacts
-    ul.header__external-links 
-      li.header__external-item
-        a.header__external-link(href="#")
-          img.header__external-icon(src="", alt="github")
-      li.header__external-item 
-        a.header__external-link(href="#")
-          img.header__external-icon(src="", alt="hh")
+      ul.header__external-links 
+        li.header__external-item
+          a.header__external-link(href="https://github.com/Igrrrr" about="blank")
+            img.header__external-icon(src="@img/ghgrey.svg", alt="github")
+        li.header__external-item 
+          a.header__external-link(href="#")
+            img.header__external-icon(src="@img/hh_logo.png", alt="hh")

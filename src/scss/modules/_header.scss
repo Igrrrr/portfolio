@@ -1,0 +1,22 @@
+.header {
+  background-color: yellow;
+  padding: 1rem 0;
+
+  & * {
+    display: flex;
+  }
+
+  &__container {
+    background-color: yellowgreen;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__external-links {
+    gap: 2rem;
+  }
+
+  &__external-icon {
+    width: 30px;
+  }
+}

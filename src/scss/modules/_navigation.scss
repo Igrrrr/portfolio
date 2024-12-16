@@ -1,3 +1,17 @@
+.nav {
+ gap: 4rem;
+  &__list {
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+.burger,
+.burger__toggle {
+    display: none;
+}
+
+
 // .nav {
 //   display: flex;
 //   justify-content: space-between;
