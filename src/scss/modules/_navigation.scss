@@ -7,23 +7,28 @@
 
   &__item {
     font-size: 1.4rem;
-    
-    // &:hover {
-    //   transition: all 2s ease;
-    //   color: black;
-    //   //text-decoration:underline;
-    //   transform: scale(1.1)
-    // }
+    color: $color-white;
+   
+    &:hover {
+      transition: all 1s ease;
+      background: linear-gradient(90deg, rgba(216,29,29,1) 0%, rgba(233,215,0,1) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      //color: black;
+      //text-decoration:underline;
+      //transform: scale(1.1)
+    }
   }
 
 
 }
 
-:is(.nav__item, .header__external-icon):hover {
-  display: inline-block;
-  transition: all 1.5s ease;
-  transform: scale(1.1)
-}
+// :is(.nav__item, .header__external-icon):hover {
+//   display: inline-block;
+//   transition: all 1.5s ease;
+//   transform: scale(1.1)
+// }
 
 .burger,
 .burger__toggle {
