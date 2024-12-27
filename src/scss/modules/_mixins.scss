@@ -1,0 +1,4 @@
+@mixin square-img($size) {
+  max-width: $size;
+  max-height: $size;
+}
