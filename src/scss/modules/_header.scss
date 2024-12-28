@@ -1,6 +1,7 @@
 .header {
   background-color: yellow;
-  padding: 1rem 0;
+  padding: 1rem 0 10rem;
+  position: relative;
 
   & * {
     display: flex;
@@ -31,4 +32,12 @@
   &__external-icon {
     width: 30px;
   }
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
+  /* set height to pixels if you want angle to change with screen width */
 }
