@@ -8,13 +8,21 @@
   &__item {
     font-size: 1.4rem;
     color: $color-white;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 90%, red 90%, blue 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 400ms;
    
     &:hover {
-      transition: all 1s ease;
-      background: linear-gradient(90deg, rgba(216,29,29,1) 0%, rgba(233,215,0,1) 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
+      background-size: 100% 100%;
+      background-position-x: left;
+      // transition: all 1s ease;
+      // background: linear-gradient(90deg, rgba(216,29,29,1) 0%, rgba(233,215,0,1) 100%);
+      // background-clip: text;
+      // -webkit-background-clip: text;
+      // color: transparent;
+
       //color: black;
       //text-decoration:underline;
       //transform: scale(1.1)
