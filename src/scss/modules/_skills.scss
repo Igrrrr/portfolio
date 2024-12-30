@@ -1,4 +1,10 @@
 .skills {
+
+  &__icons-container {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
   &__icon {
    @include square-img(120px)
   }
