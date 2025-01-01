@@ -3,8 +3,11 @@ section.skills
     h2.title.skills__title
       |My tech stack
     .skills__icons-container 
-      img.skills__icon(src="@img/html.svg", alt="html")
-      img.skills__icon(src="@img/css.svg", alt="css")
+      .hexagon-border 
+        .hexagon-content
+          img.skills__icon(src="@img/html.svg", alt="html")
+      .skills__icon-wrapper
+        img.skills__icon(src="@img/css.svg", alt="css")
       img.skills__icon(src="@img/sass.svg", alt="sass")
       img.skills__icon(src="@img/bootstrap.svg", alt="bootstrap")
       img.skills__icon(src="@img/js.svg", alt="js")

@@ -6,6 +6,85 @@
     grid-template-columns: repeat(4, 1fr);
   }
   &__icon {
-   @include square-img(120px)
+   @include square-img(120px);
+
+   &-wrapper {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+   }
   }
+}
+
+// .hexagon {
+//   &-border {
+//     position: relative;
+//     width: 100px; /* Ширина шестиугольника */
+//     height: 57.74px; /* Высота шестиугольника (с учетом формулы) */
+//     background-color: transparent; /* Прозрачный фон для границы */
+//     margin: 30px; /* Отступы для расположения */
+
+//     &::before, &::after {
+//       content: '';
+//       position: absolute;
+//       width: 0;
+//       border-left: 50px solid transparent; /* Левый треугольник */
+//       border-right: 50px solid transparent; /* Правый треугольник */
+//     }
+
+//     &::before {
+//       bottom: 100%; /* Верхняя часть шестиугольника */
+//       border-bottom: 29.15px solid #3e92cc; /* Цвет верхней границы */
+//     }
+
+//     &::after {
+//       top: 100%; /* Нижняя часть шестиугольника */
+//       border-top: 29.15px solid #3e92cc; /* Цвет нижней границы */
+//     }
+//   }
+
+//   &-content {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%); /* Центрирование содержимого */
+//     background-color: white; /* Фон для содержимого шестиугольника */
+//     padding: 10px; /* Отступы внутри содержимого */
+//   }
+// }
+
+.hexagon-border {
+  position: relative;
+  width: 100px; /* Ширина шестиугольника */
+  height: 57.74px; /* Высота шестиугольника (с учетом формулы) */
+  background-color: transparent; /* Прозрачный фон для границы */
+  margin: 30px; /* Отступы для расположения */
+}
+
+.hexagon-border:before,
+.hexagon-border:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent; /* Левый треугольник */
+  border-right: 50px solid transparent; /* Правый треугольник */
+}
+
+.hexagon-border:before {
+  bottom: 100%; /* Верхняя часть шестиугольника */
+  border-bottom: 29.15px solid #3e92cc; /* Цвет верхней границы */
+}
+
+.hexagon-border:after {
+  top: 100%; /* Нижняя часть шестиугольника */
+  border-top: 29.15px solid #3e92cc; /* Цвет нижней границы */
+}
+
+.hexagon-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрирование содержимого */
+  background-color: white; /* Фон для содержимого шестиугольника */
+  padding: 10px; /* Отступы внутри содержимого */
 }
