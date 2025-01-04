@@ -11,7 +11,16 @@
    &-wrapper {
     width: 150px;
     height: 150px;
-    border: 2px solid black;
+    //border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   &-hexagon {
+    position: absolute;
+    z-index: -1;
+    width: 170px;
    }
   }
 }
