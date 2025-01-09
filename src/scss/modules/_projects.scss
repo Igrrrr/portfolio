@@ -1,0 +1,15 @@
+.projects {
+  &__cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
+}
+.card {
+  background-color: red;
+  text-align: center;
+
+  &__title {
+    //text-align: center;
+  }
+}
