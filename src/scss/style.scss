@@ -12,8 +12,10 @@ html {
 }
 
 body {
+  background-color: $background3;
   font-size: 16px;
   font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   scrollbar-gutter: stable;
   cursor: pointer;
 }
@@ -31,6 +33,7 @@ body {
 
 .title {
   font-size: 3rem;
+  color: $background;
 }
 
 .scroll-block {
