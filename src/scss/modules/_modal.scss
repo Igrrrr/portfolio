@@ -1,3 +1,29 @@
+.modal {
+  display: block;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+
+  &__container {
+    //max-width: 90%; /* Максимальная ширина контейнера */
+    max-height: 10%;
+    //margin: auto; /* Центрирование контейнера */
+    position: relative; /* Для позиционирования внутренних элементов */
+    display: inline-block;
+    //width: fit-content;
+  }
+
+  &__img {
+    //width: 90%; /* Ширина изображения 100% от родительского контейнера */
+    height: auto; /* Высота автоматически подстраивается */
+    display: block; /* Убирает пробелы под изображением */
+}
+
+
+
+}
 // .modal {
 //   padding: 56px 0 90px;
 //   border-radius: 30px;
