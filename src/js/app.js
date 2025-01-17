@@ -5,6 +5,10 @@ const dialog = document.querySelector(".modal");
 const openModal = document.querySelector(".hero__button");
 const closeModal = document.querySelector(".modal__close-button");
 
+const test = () => console.log(111);
+
+closeModal.addEventListener("click", test);
+
 const openModalAndBlockScroll = () => {
   dialog.showModal();
   document.body.classList.add("scroll-block");
@@ -52,7 +56,7 @@ anchors.forEach((anchor) => {
 });
 
 burger.addEventListener("change", addOrRemoveBlur);
-openModal.addEventListener("click", openModalAndBlockScroll);
+//openModal.addEventListener("click", openModalAndBlockScroll);
 closeModal.addEventListener("click", close);
 dialog.addEventListener("click", closeByOverlayClick);
 dialog.addEventListener("cancel", returnScroll);
