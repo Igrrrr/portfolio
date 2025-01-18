@@ -2,12 +2,23 @@ const burger = document.getElementById("burger-toggle");
 const img = document.querySelector(".hero__container");
 const main = document.getElementById("main");
 const dialog = document.querySelector(".modal");
-const openModal = document.querySelector(".hero__button");
+//const openModal = document.querySelector(".hero__button");
+const openModal = document.querySelector(".card__img-container");
 const closeModal = document.querySelector(".modal__close-button");
 
-const test = () => console.log(111);
-
-closeModal.addEventListener("click", test);
+//const test = (event) => console.log(event.target.style);
+const test = () => {
+  if (dialog.style.display === "none" || dialog.style.display === "") {
+    dialog.style.display = "block";
+    document.body.classList.add("scroll-block");
+    document.body.classList.add("blur");
+  } else {
+    dialog.style.display = "none";
+    document.body.classList.remove("scroll-block");
+    document.body.classList.remove("blur");
+  }
+};
+openModal.addEventListener("click", test);
 
 const openModalAndBlockScroll = () => {
   dialog.showModal();
