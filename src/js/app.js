@@ -2,9 +2,11 @@ const burger = document.getElementById("burger-toggle");
 const img = document.querySelector(".hero__container");
 const main = document.getElementById("main");
 const dialog = document.querySelector(".modal");
-//const openModal = document.querySelector(".hero__button");
 const openModal = document.querySelector(".card__img-container");
 const closeModal = document.querySelector(".modal__close-button");
+const img1 = document.querySelector(".card__img1");
+
+//console.log(img1.getAttribute("src"));
 
 //const test = (event) => console.log(event.target.style);
 const test = () => {
@@ -18,7 +20,6 @@ const test = () => {
     document.body.classList.remove("blur");
   }
 };
-openModal.addEventListener("click", test);
 
 const openModalAndBlockScroll = () => {
   dialog.showModal();
@@ -67,7 +68,7 @@ anchors.forEach((anchor) => {
 });
 
 burger.addEventListener("change", addOrRemoveBlur);
-//openModal.addEventListener("click", openModalAndBlockScroll);
+openModal.addEventListener("click", openModalAndBlockScroll);
 closeModal.addEventListener("click", close);
 dialog.addEventListener("click", closeByOverlayClick);
 dialog.addEventListener("cancel", returnScroll);
