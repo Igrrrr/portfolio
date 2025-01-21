@@ -1,46 +1,37 @@
 const burger = document.getElementById("burger-toggle");
-const img = document.querySelector(".hero__container");
 const main = document.getElementById("main");
 const dialog = document.querySelector(".modal");
-const modalImg = document.querySelector(".modal__img");
-const openModal = document.querySelector(".card__img-container");
 const closeModal = document.querySelector(".modal__close-button");
-const img1 = document.querySelector(".card__img1");
+const cardContainer = document.querySelector(".projects__cards-container");
 
-const openModalAndBlockScroll = () => {
-  dialog.showModal();
-  document.body.classList.add("scroll-block");
-  document.body.classList.add("blur");
+const getSrc = (e) => {
+  if (e.target.closest(".card")) {
+    console.log("getSrc is done");
+    console.log(
+      e.target.closest(".card").querySelector(".card__img").getAttribute("src")
+    );
+    return e.target
+      .closest(".card")
+      .querySelector(".card__img")
+      .getAttribute("src");
+  }
+  return null;
 };
 
-const imgContainers = document.querySelectorAll(".card__img-container");
-imgContainers.forEach(function (container) {
-  container.addEventListener("click", function () {
-    const imgElement = container.querySelector(".card__img");
-    const imgSrc = imgElement.getAttribute("src");
-    console.log(imgSrc);
-    modalImg.src = imgSrc;
-    openModalAndBlockScroll();
-  });
-});
+const setModal = (src) => {
+  const modalImg = document.querySelector(".modal__img");
+  modalImg.src = src;
+};
 
-//const test = () => {
-//   if (dialog.style.display === "none" || dialog.style.display === "") {
-//     dialog.style.display = "block";
-//     document.body.classList.add("scroll-block");
-//     document.body.classList.add("blur");
-//   } else {
-//     dialog.style.display = "none";
-//     document.body.classList.remove("scroll-block");
-//     document.body.classList.remove("blur");
-//   }
-// };
-
-// const openModalAndBlockScroll = () => {
-//   dialog.showModal();
-//   document.body.classList.add("scroll-block");
-//   document.body.classList.add("blur");
-// };
+const openModalAndBlockScroll = (e) => {
+  const src = getSrc(e);
+  if (src) {
+    setModal(src);
+    dialog.showModal();
+    document.body.classList.add("scroll-block");
+    document.body.classList.add("blur");
+  }
+};
 
 const returnScroll = () => {
   document.body.classList.remove("scroll-block");
@@ -83,7 +74,7 @@ anchors.forEach((anchor) => {
 });
 
 burger.addEventListener("change", addOrRemoveBlur);
-//openModal.addEventListener("click", openModalAndBlockScroll);
+cardContainer.addEventListener("click", openModalAndBlockScroll);
 closeModal.addEventListener("click", close);
-//dialog.addEventListener("click", closeByOverlayClick);
+dialog.addEventListener("click", closeByOverlayClick);
 dialog.addEventListener("cancel", returnScroll);
