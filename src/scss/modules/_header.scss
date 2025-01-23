@@ -22,7 +22,6 @@
   }
 
   &__container {
-    //background-color: black;
     align-items: center;
     justify-content: space-between;
   }
@@ -31,6 +30,7 @@
     font-size: 1.8rem;
     font-weight: 700;
     color: $color-black;
+    transition: all 1s ease;
     &:hover {
       transition: all 1s ease;
       background: linear-gradient(90deg, rgba(216,29,29,1) 0%, rgba(233,215,0,1) 100%);

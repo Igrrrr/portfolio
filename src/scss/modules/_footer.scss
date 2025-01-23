@@ -1,8 +1,39 @@
 .footer {
   margin-top: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
+
 
   &__nav {
     margin-top: 2rem;
+    display: flex;
+  }
+
+  &__logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: grey;
+    transition: color 1s ease;
+
+    &:hover {
+      transition: color 1s ease;
+      color: black;
+    }
+  }
+
+  &__external-links {
+    display: flex;
+    gap: 3rem;
+    margin-left: auto;
+  }
+
+  &__external-icon {
+    width: 30px;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+    &:hover {
+      //display: inline-block;
+      transition: transform 0.3s ease;
+      transform: scale(1.2)
+    }
   }
 }
