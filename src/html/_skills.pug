@@ -3,18 +3,21 @@ section.skills
     h2.title.skills__title
       |My tech stack
     .skills__icons-container 
-      .hexagon-border 
-        .hexagon-content
-          img.skills__icon(src="@img/html.svg", alt="html")
-      .skills__icon-wrapper
-        svg.skills__icon-hexagon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200")
-          polygon(fill="none" points="100,0 200,50 200,150 100,200 0,150 0,50" stroke="black" stroke-width="4")
+      .wrapper-hexagon
+        img.skills__icon(src="@img/html.svg", alt="html")
+      .wrapper-hexagon
+        //- svg.skills__icon-hexagon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200")
+        //-   polygon(fill="none" points="100,0 200,50 200,150 100,200 0,150 0,50" stroke="black" stroke-width="4")
         img.skills__icon(src="@img/css.svg", alt="css")
-      .skills__icon-square
+      .wrapper-hexagon
         img.skills__icon(src="@img/sass.svg", alt="sass")
-      .skills__icon-square
-        img.skills__icon(src="@img/bootstrap.svg", alt="bootstrap")
-      img.skills__icon(src="@img/js.svg", alt="js")
-      img.skills__icon(src="@img/react.svg", alt="react")
-      img.skills__icon(src="@img/gulp.png", alt="gulp")
-      img.skills__icon(src="@img/ghblack.svg", alt="github")
+      .wrapper-hexagon
+          img.skills__icon(src="@img/bootstrap.svg", alt="bootstrap")
+      .wrapper-hexagon
+        img.skills__icon(src="@img/js.svg", alt="js")
+      .wrapper-hexagon  
+        img.skills__icon(src="@img/react.svg", alt="react")
+      .wrapper-hexagon
+        img.skills__icon(src="@img/gulp.png", alt="gulp")
+      .wrapper-hexagon
+        img.skills__icon(src="@img/ghblack.svg", alt="github")

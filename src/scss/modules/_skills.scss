@@ -48,6 +48,30 @@
   }
 }
 
+.wrapper-hexahon {
+  @include hexahon(160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: red;
+  transition: background-color 1s ease;
+
+  &:hover {
+    background-color: black;
+  }
+
+  &::after {
+    content: '';
+    position:absolute;
+    background-image: linear-gradient(#ff9d2f, #ff4400);
+    @include hexahon(150px);
+    z-index: -1;
+
+   
+  }
+}
+
 // .hexagon {
 //   &-border {
 //     position: relative;

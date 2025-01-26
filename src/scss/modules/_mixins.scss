@@ -1,4 +1,10 @@
 @mixin square-img($size) {
   max-width: $size;
-  max-height: $size;
+  max-width: $size;
+}
+
+@mixin hexahon($width) {
+  height: calc(#{$width} * #{$aspect-ratio-hexagon});
+  width: $width;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
