@@ -1,0 +1,27 @@
+.about {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__message {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 3rem;
+    font-weight: 400;
+
+    &_gradient {
+      color: transparent;
+      background-clip: text;
+      background-image: linear-gradient(#ff9d2f, #ff4400);;
+    }
+  }
+
+  &__img {
+    width: 300px;
+    clip-path: circle(50% at 50% 50%);
+  }
+}
