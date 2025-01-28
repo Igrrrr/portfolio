@@ -1,5 +1,11 @@
-.skills {
+@media (orientation: portrait) {
+  @media (width <= 575px) {
 
+  }
+}
+
+
+.skills {
   margin-top: 3rem;
 
   &__icons-container {

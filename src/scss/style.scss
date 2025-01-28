@@ -10,6 +10,17 @@
 @import 'modules/modal';
 @import 'modules/footer';
 
+// @media (orientation: portrait) {
+//   @media (width <= 575px)  {
+//     .title {
+//       font-size: 1.2rem;
+//     }
+//   }
+// }
+
+
+
+
 html {
   scrollbar-gutter: stable;
 }
@@ -45,10 +56,21 @@ body {
   overflow: hidden;
 }
 
+@media (width <= 575px)  {
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
 @media(width <= 1399px) {
   .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0 2rem;
+  }
+}
+
+@media(width <= 1399px) {
+  .container {
+    padding: 0 1rem;
   }
 }
 
