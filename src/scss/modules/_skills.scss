@@ -11,7 +11,9 @@
   &__icons-container {
     padding-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    //grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    column-gap: 3rem;
     row-gap: 3rem;
     align-items: center;
     justify-items: center
