@@ -1,8 +1,3 @@
-@mixin square-img($size) {
-  max-width: $size;
-  max-width: $size;
-}
-
 @mixin hexahon($width) {
   height: calc(#{$width} * #{$aspect-ratio-hexagon});
   width: $width;
