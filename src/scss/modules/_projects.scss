@@ -1,5 +1,4 @@
 .projects {
-  display: none;
   margin-top: 3rem;
 
   &__cards-container{
@@ -9,8 +8,11 @@
     padding-top: 2rem;
   }
 }
+
 .card {
   background-color: $background2;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   border-radius: 10px;
 
@@ -20,14 +22,12 @@
     width: 100%;
     object-fit: none;
     object-position: left top;
-    //position: relative;
 
     &-container {
       position: relative;
 
       &::after {
         content: "+";
-
         color: $color-white;
         font-size: 50px;
         display: flex;
@@ -38,7 +38,7 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        top: 0; // Добавьте top и left для позиционирования
+        top: 0;
         left: 0;
         z-index: 2;
         opacity: 0;
@@ -49,44 +49,14 @@
         opacity: 0.8;
         transition: all 0.5s ease;
       }
-
-    //   &::before {
-    //     content: "";
-    //     position: absolute;
-    //     width: 30px; // Ширина креста
-    //     height: 3px; // Высота креста
-    //     background-color: white; // Цвет креста
-    //     top: 50%; // Центрируем по вертикали
-    //     left: 50%; // Центрируем по горизонтали
-    //     transform: translate(-50%, -50%); // Сдвигаем на половину ширины и высоты для центрирования
-    //     opacity: 0; // Начальная непрозрачность
-    //     transition: opacity 0.5s ease; // Плавный переход для креста
-    //     z-index: 3;
-    // }
-
-    // &:hover::before {
-    //     opacity: 1; // Крест становится видимым при наведении
-    // }
     }
-
-    // &::after {
-    //   content: "";
-    //   background-color: red;
-    //   width: 200px;
-    //   height: 200px;
-    //   position: absolute;
-    //   top: 0; // Добавьте top и left для позиционирования
-    //   left: 0;
-    //   z-index: 2;
-    // }
   }
  
   &__specification {
+    flex-grow: 1;
     padding: 24px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
@@ -109,11 +79,10 @@
   }
 
   &__link {
-    margin-top: 1.5rem;
-    //margin-bottom: 0;
-    bottom: 0;
+    margin-top: 1.6rem;
+    flex-grow: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     gap: 0.5rem;
   }

@@ -2,11 +2,11 @@
   margin-top: 3rem;
 
   &__icons-container {
-    padding-top: 2rem;
+    margin-top: 2rem;
     display: grid;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
-    justify-items: center
+    justify-items: center;
   }
 
   &__icon {
@@ -58,9 +58,13 @@
     }
   }
 
-  @media (width <= 575px) {
-    .skills__title {
-      color: yellow
+  @media (width <= 420px) {
+    .wrapper-hexahon {
+      @include hexahon(100px);
+
+      &:after {
+        @include hexahon(95px);
+      }
     }
   }
 }
@@ -72,9 +76,21 @@
     }
   }
 
-  @media (width <= 575px) {
-    .skills__title {
-      color: blue
+  @media (width <= 767px) {
+
+    .skills {
+      &__icons-container {
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+        gap: 1.4rem
+      }
+    }
+
+    .wrapper-hexahon {
+      @include hexahon(100px);
+
+      &:after {
+        @include hexahon(95px);
+      }
     }
   }
 }
