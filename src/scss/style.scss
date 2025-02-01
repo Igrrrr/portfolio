@@ -64,11 +64,11 @@ body {
   }
 }
 
-// @media(width <= 1399px) {
-//   .container {
-//     padding: 0 1rem;
-//   }
-// }
+@media(width <= 1199px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+}
 
 @media (width <= 768px)  {
   .container {
