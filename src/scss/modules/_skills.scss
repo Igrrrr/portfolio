@@ -6,26 +6,19 @@
     display: grid;
     gap: 2rem;
     align-items: center;
-    justify-items: center;
+    //justify-items: center;
+
+    &:nth-of-type(-n+4) {
+      justify-items: start;
+    }
+
+    &:nth-last-child(-n+4) {
+      justify-items: end;
+    }
   }
 
   &__icon {
    width: 60%;
-   //z-index: -2;
-
-   &-wrapper {
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-
-   &-hexagon {
-    position: absolute;
-    z-index: -1;
-    width: 170px;
-   }
   }
 }
 
@@ -38,8 +31,13 @@
   background-color: red;
   transition: background-color 1s ease;
 
+  // &:nth-of-type(-n+4) {
+  //   display: flex;
+  //   justify-content: start;
+  // }
+
   &:hover {
-    background-color: black;
+    background-color: $color-black;
   }
 
   &::after {
