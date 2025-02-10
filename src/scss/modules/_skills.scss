@@ -1,5 +1,6 @@
 .skills {
   margin-top: 3rem;
+  display: none;
 
   &__icons-container {
     margin-top: 2rem;
@@ -12,9 +13,9 @@
       justify-items: start;
     }
 
-    &:nth-last-child(-n+4) {
-      justify-items: end;
-    }
+    // &:nth-last-child(-n+4) {
+    //   justify-items: end;
+    // }
   }
 
   &__icon {
@@ -31,11 +32,10 @@
   background-color: red;
   transition: background-color 1s ease;
 
-  // &:nth-of-type(-n+4) {
-  //   display: flex;
-  //   justify-content: start;
-  // }
-
+  &:nth-last-of-type(-n+4) {
+    justify-items: end;
+  }
+  
   &:hover {
     background-color: $color-black;
   }
