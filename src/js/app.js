@@ -6,22 +6,42 @@ const dialog = document.querySelector(".modal");
 const closeModal = document.querySelector(".modal__close-button");
 const cardContainer = document.querySelector(".projects__cards-container");
 
-//new Swiper(".swiper");
+new Swiper(".swiper", {
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+
+  mousewheel: {
+    sensitivity: 1,
+    eventsTarget: ".swiper",
+  },
+
+  slidesPerView: 3,
+
+  spaceBetween: 30,
+});
 //new Splide(".splide").mount();
 
-const slider = new Splide("#slider", {
-  //perPage: 1,
-  gap: "2rem",
-  perMove: "1",
-  breakpoints: {
-    640: {
-      perPage: 1,
-      padding: { top: "2rem", left: "1rem", right: "1rem" },
-      arrows: false,
-    },
-  },
-});
-slider.mount();
+// const slider = new Splide("#slider", {
+//   //perPage: 1,
+//   gap: "2rem",
+//   perMove: "1",
+//   breakpoints: {
+//     640: {
+//       perPage: 1,
+//       padding: { top: "2rem", left: "1rem", right: "1rem" },
+//       arrows: false,
+//     },
+//   },
+// });
+// slider.mount();
 
 const getSrc = (e) => {
   if (e.target.closest(".card")) {

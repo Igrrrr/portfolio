@@ -5,6 +5,7 @@ html(lang='en')
     meta(name='description' content='content')
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    link(href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel='stylesheet')
     link(href='css/style.min.css' rel='stylesheet')
     title portfolio
   body
@@ -13,8 +14,9 @@ html(lang='en')
       include html/_about.pug
       include html/_skills.pug
       //- include html/_projects.pug
-      include html/_slider.pug
+      include html/_swiper.pug
       include html/_modal.pug
       include html/_footer.pug
-  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  //- script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
   script(src='js/app.min.js')
