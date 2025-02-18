@@ -3,9 +3,9 @@
   //display: none;
 
   &__cards-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // column-gap: 2rem;
     padding-top: 2rem;
   }
 }
@@ -56,7 +56,7 @@
   &__specification {
     flex-grow: 1;
     padding: 24px;
-    display: flex;
+    //display: flex;
     flex-direction: column;
   }
 

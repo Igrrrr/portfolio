@@ -1,8 +1,8 @@
-.swiper__container 
+.container.projects.swiper__container 
   h2.title
     |Projects
   .swiper 
-    .swiper-wrapper
+    .swiper-wrapper.projects__cards-container
       .card.swiper-slide
         .card__img-container
           img.card__img(src="@img/insur.png", alt="insurance")
@@ -68,4 +68,53 @@
               img.card__icon-picture(src="@img/ghblack.svg", alt="github")
             a.card__text-link(href="https://github.com/Igrrrr/tz_toDo" target="blanc")
               |Repositoriy
-    .swiper-scrollbar
+      .card.swiper-slide
+        .card__img-container
+          img.card__img(src="@img/todo.png", alt="todo")
+        .card__specification 
+          h2.card__title 
+            |toDo
+          h3.card__description 
+            |The application is designed to manage notes:
+            br
+            |- task creation: users can add new tasks,
+            br
+            |- saving tasks in the order they were added: the most recent tasks are always at the top,
+            br
+            |- marking completed or irrelevant tasks: a checkbox is placed opposite the task,
+            br
+            |- deleting tasks: user can delete tasks
+          h3.card__skills 
+            b 
+              |Tech stack: 
+            |Vue.js, SCSS
+          .card__link 
+            a.card__icon-link(href="https://github.com/Igrrrr/tz_toDo" target="blanc")
+              img.card__icon-picture(src="@img/ghblack.svg", alt="github")
+            a.card__text-link(href="https://github.com/Igrrrr/tz_toDo" target="blanc")
+              |Repositoriy
+      .card.swiper-slide
+        .card__img-container
+          img.card__img(src="@img/todo.png", alt="todo")
+        .card__specification 
+          h2.card__title 
+            |toDo
+          h3.card__description 
+            |The application is designed to manage notes:
+            br
+            |- task creation: users can add new tasks,
+            br
+            |- saving tasks in the order they were added: the most recent tasks are always at the top,
+            br
+            |- marking completed or irrelevant tasks: a checkbox is placed opposite the task,
+            br
+            |- deleting tasks: user can delete tasks
+          h3.card__skills 
+            b 
+              |Tech stack: 
+            |Vue.js, SCSS
+          .card__link 
+            a.card__icon-link(href="https://github.com/Igrrrr/tz_toDo" target="blanc")
+              img.card__icon-picture(src="@img/ghblack.svg", alt="github")
+            a.card__text-link(href="https://github.com/Igrrrr/tz_toDo" target="blanc")
+              |Repositoriy
