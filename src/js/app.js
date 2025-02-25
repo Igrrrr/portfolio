@@ -7,6 +7,11 @@ const closeModal = document.querySelector(".modal__close-button");
 const cardContainer = document.querySelector(".projects__cards-container");
 
 new Swiper(".swiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
   scrollbar: {
     el: ".swiper-scrollbar",
     draggable: true,
@@ -23,9 +28,24 @@ new Swiper(".swiper", {
     eventsTarget: ".swiper",
   },
 
-  slidesPerView: 3,
+  //slidesPerView: 3,
 
-  spaceBetween: 30,
+  //spaceBetween: 20,
+
+  breakpoints: {
+    "@0.75": {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    "@1.00": {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    "@1.50": {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 });
 //new Splide(".splide").mount();
 
