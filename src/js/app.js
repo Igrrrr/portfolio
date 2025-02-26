@@ -28,11 +28,26 @@ new Swiper(".swiper", {
     eventsTarget: ".swiper",
   },
 
-  //slidesPerView: 3,
+  // slidesPerView: 3,
 
-  //spaceBetween: 20,
+  // spaceBetween: 30,
 
   breakpoints: {
+    // 992: {
+    //   slidesPerView: 3,
+    //   spaceBetween: 30,
+    // },
+
+    // 991: {
+    //   slidesPerView: 2,
+    //   spaceBetween: 20,
+    // },
+
+    // 575: {
+    //   slidesPerView: 1,
+    //   spaceBetween: 10,
+    // },
+
     "@0.75": {
       slidesPerView: 1,
       spaceBetween: 10,
