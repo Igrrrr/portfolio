@@ -32,6 +32,23 @@
 
 }
 
+@media (width <= 768px) {
+  .nav {
+    &__item {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (width <= 576px) {
+  .nav {
+    &__item {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+
 // :is(.nav__item, .header__external-icon):hover {
 //   display: inline-block;
 //   transition: all 1.5s ease;
