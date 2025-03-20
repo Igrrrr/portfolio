@@ -2,8 +2,20 @@
   //background-color: yellow;
   //background-image: linear-gradient(#ff9d2f, #ff6126);
   //display: none;
-  padding: 1rem 0 10rem;
-  position: relative;
+
+  //padding: 1rem 0 10rem;
+
+  // position: relative;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: red;
+  padding: 1rem 0;
+
+
+ 
 
   & * {
     display: flex;
@@ -13,7 +25,8 @@
     position: absolute;
     content: '';
     width: 70%;
-    height: 150%;
+    //height: 150%;
+    height: 400px;
     background-image: linear-gradient(#ff9d2f, #ff4400);
     top: 0;
     left: 30%;
@@ -24,6 +37,12 @@
   &__container {
     align-items: center;
     justify-content: space-between;
+
+    // position: fixed;
+    // background-color: red;
+    // left: 0;
+    // top: 0;
+    // right: 0;
   }
 
   &__logo {
