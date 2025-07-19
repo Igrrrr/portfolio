@@ -3,6 +3,7 @@
 @import 'modules/variables';
 @import 'modules/mixins';
 @import 'modules/header';
+@import 'modules/wrapper';
 @import 'modules/about';
 @import 'modules/navigation';
 @import 'modules/skills';
@@ -27,7 +28,7 @@ html {
 }
 
 body {
-  background-color: $background3;
+  //background-color: $background3;
   //background-color: #ffffc6;
   //background-color: #562fab;
   font-size: 16px;

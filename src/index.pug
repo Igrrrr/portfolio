@@ -9,14 +9,15 @@ html(lang='en')
     link(href='css/style.min.css' rel='stylesheet')
     title portfolio
   body
-    include html/_header.pug
-    main#main
-      include html/_about.pug
-      include html/_skills.pug
-      //- include html/_projects.pug
-      include html/_swiper.pug
-      include html/_modal.pug
-      include html/_footer.pug
+    div.wrapper
+      include html/_header.pug
+      main#main
+        include html/_about.pug
+        include html/_skills.pug
+        //- include html/_projects.pug
+        include html/_swiper.pug
+        include html/_modal.pug
+        include html/_footer.pug
   //- script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
   script(src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
   script(src='js/app.min.js')

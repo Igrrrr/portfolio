@@ -5,14 +5,15 @@
 
   //padding: 1rem 0 10rem;
 
-  // position: relative;
+  //position: relative;
 
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
-  background-color: red;
+  //background-color: red;
   padding: 1rem 0;
+  z-index: 1;
 
 
  
@@ -21,18 +22,18 @@
     display: flex;
   }
 
-  &::after {
-    position: absolute;
-    content: '';
-    width: 70%;
-    //height: 150%;
-    height: 400px;
-    background-image: linear-gradient(#ff9d2f, #ff4400);
-    top: 0;
-    left: 30%;
-    z-index: -1;
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
-  }
+  // &::after {
+  //   position: absolute;
+  //   content: '';
+  //   width: 70%;
+  //   //height: 150%;
+  //   height: 400px;
+  //   background-image: linear-gradient(#ff9d2f, #ff4400);
+  //   top: 0;
+  //   left: 30%;
+  //   z-index: -1;
+  //   clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+  // }
 
   &__container {
     align-items: center;
