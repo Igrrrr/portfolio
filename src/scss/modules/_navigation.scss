@@ -6,18 +6,51 @@
     align-items: center;
   }
 
-  &__item {
+  &__link {
     font-size: 1.4rem;
-    color: $background4;
-    background-image: linear-gradient(to bottom, transparent 0%, transparent 90%, red 90%, blue 100%);
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    background-position-x: right;
-    transition: background-size 400ms;
+    // color: $background4;
+    // background-image: linear-gradient(to bottom, transparent 0%, transparent 90%, red 90%, blue 100%);
+    // background-repeat: no-repeat;
+    // background-size: 0% 100%;
+    // background-position-x: right;
+    // transition: background-size 400ms;
+
+    position: relative;
+    /*hight: 50px;*/
+    padding: 0.5rem;
+    border: 2px solid #000;
+    background: white;
+    user-select: none;
+    white-space: nowrap;
+    transition: all .05s linear;
+    // font-family: inherit;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      background: white;
+      transition: all .2s linear;
+      z-index: 1;
+    }
+
+    &:before {
+      width: calc(100% + 6px);
+      height: calc(100% - 16px);
+      top: 8px;
+      left: -3px;
+    }
+
+    &:after {
+      width: calc(100% - 16px);
+      height: calc(100% + 6px);
+      top: -3px;
+      left: 8px;
+    }
+
    
     &:hover {
-      background-size: 100% 100%;
-      background-position-x: left;
+      // background-size: 100% 100%;
+      // background-position-x: left;
       // transition: all 1s ease;
       // background: linear-gradient(90deg, rgba(216,29,29,1) 0%, rgba(233,215,0,1) 100%);
       // background-clip: text;
@@ -27,7 +60,32 @@
       //color: black;
       //text-decoration:underline;
       //transform: scale(1.1)
+
+      cursor: crosshair;
+
     }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+     &:hover:before {
+      height: calc(100% - 32px);
+      top: 16px;
+    }
+    
+    &:hover:after {
+      width: calc(100% - 32px);
+      left: 16px;
+    }
+
+  }
+
+  &_item {
+    font-size: 15px;
+    z-index: 5;
+    position: relative;
+    font-weight: 600;
   }
 }
 
