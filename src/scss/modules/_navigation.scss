@@ -8,6 +8,7 @@
 
   &__link {
     font-size: 1.4rem;
+    
     // color: $background4;
     // background-image: linear-gradient(to bottom, transparent 0%, transparent 90%, red 90%, blue 100%);
     // background-repeat: no-repeat;
@@ -81,11 +82,16 @@
 
   }
 
-  &_item {
-    font-size: 15px;
-    z-index: 5;
-    position: relative;
+  &__item {
+    z-index: 2;
+    // position: relative;
     font-weight: 600;
+    color: $background4;
+
+    &:hover {
+      cursor: crosshair;
+      color: $background3;
+    }
   }
 }
 
