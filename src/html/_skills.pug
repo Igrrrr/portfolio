@@ -1,22 +1,15 @@
+include _mixins.pug
+
 section.skills 
   .container
     h2.title.skills__title
       |My tech stack
     .skills__icons-container 
-      .wrapper-hexahon
-        img.skills__icon(src="@img/html.svg", alt="html", title='html')
-      .wrapper-hexahon
-        img.skills__icon(src="@img/css.svg", alt="css", title='css')
-      .wrapper-hexahon
-        img.skills__icon(src="@img/js.svg", alt="js", title='js')
-      .wrapper-hexahon
-        img.skills__icon(src="@img/gulp.png", alt="gulp", title='gulp')
-      .wrapper-hexahon
-        img.skills__icon(src="@img/ghblack.svg", alt="github", title='github')
-      .wrapper-hexahon  
-        img.skills__icon(src="@img/sass.svg", alt="sass", title='sass')
-      .wrapper-hexahon
-        img.skills__icon(src="@img/react.svg", alt="react", title='react')
-      .wrapper-hexahon
-        img.skills__icon(src="@img/bootstrap.svg", alt="bootstrap", title='bootstrap')
-        
+      +skill-card_m('@img/html.svg', 'html')
+      +skill-card_m('@img/css.svg', 'css')
+      +skill-card_m('@img/js.svg', 'js')
+      +skill-card_m('@img/gulp.png', 'gulp')
+      +skill-card_m('@img/ghblack.svg', 'github')
+      +skill-card_m('@img/sass.svg', 'sass')
+      +skill-card_m('@img/react.svg', 'react')
+      +skill-card_m('@img/bootstrap.svg', 'bootstrap')
