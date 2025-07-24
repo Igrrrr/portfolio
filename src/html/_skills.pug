@@ -1,15 +1,11 @@
 include _mixins.pug
+include _variables.pug
 
 section.skills 
   .container
     h2.title.skills__title
       |My tech stack
     .skills__icons-container 
-      +skill-card_m('@img/html.svg', 'html')
-      +skill-card_m('@img/css.svg', 'css')
-      +skill-card_m('@img/js.svg', 'js')
-      +skill-card_m('@img/gulp.png', 'gulp')
-      +skill-card_m('@img/ghblack.svg', 'github')
-      +skill-card_m('@img/sass.svg', 'sass')
-      +skill-card_m('@img/react.svg', 'react')
-      +skill-card_m('@img/bootstrap.svg', 'bootstrap')
+      each skill in skillsList
+        +skill-card_m(skill.src, skill.alt)
+  

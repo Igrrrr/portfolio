@@ -1,12 +1,12 @@
 .skill-card {
-  // background-color: red;
   margin: 2rem;
   position: relative;
   padding: 1rem;
-  // width: 190px;
-  // height: 254px;
-  color: #fff;
+  width: 170px;
+  height: 170px;
   transition: 0.5s;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
 
   &:hover {
@@ -57,7 +57,7 @@
   }
 
   &__icon {
-      position: relative;
+    position: relative;
     padding: 10px;
     z-index: 10;
     width: 100%;

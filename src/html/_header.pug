@@ -1,3 +1,6 @@
+include _mixins.pug
+//- include _variables.pug
+
 header.header 
   .container.header__container
     a.header__logo-link
@@ -17,18 +20,22 @@ header.header
         //-   span.burger__switch_big-symbol
         //-     |]
       ul.nav__list 
-        li.nav__link
-          a.nav__item(href="about")
-            |About 
-        li.nav__link 
-          a.nav__item(href="skills")
-            |Skills
-        li.nav__link
-          a.nav__item(href="projects")
-            |Projects
-        li.nav__link
-          a.nav__item(href="contacts")
-            |Contacts
+        +navigation-link('About')
+        +navigation-link('Skills')
+        +navigation-link('Projects')
+        +navigation-link('Contacts')
+        //- li.nav__link
+        //-   a.nav__item(href="about")
+        //-     |About 
+        //- li.nav__link 
+        //-   a.nav__item(href="skills")
+        //-     |Skills
+        //- li.nav__link
+        //-   a.nav__item(href="projects")
+        //-     |Projects
+        //- li.nav__link
+        //-   a.nav__item(href="contacts")
+        //-     |Contacts
       ul.header__external-links 
         li.header__external-item
           a.header__external-link(href="https://github.com/Igrrrr" about="blank")
@@ -36,10 +43,10 @@ header.header
         li.header__external-item 
           a.header__external-link(href="#")
             img.header__external-icon(src="@img/hh_logo.png", alt="hh")
-  //-svg.header__svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none")
-    //- polygon(fill="white" points="30,100 100,40 100,100")
-    //- polygon(fill="white" points="0,40 30,100 0,100")
-    //-polygon(fill="white" points="0,40 30,100 100,40 100,100 0,100")
-    polygon(fill="white" points="0,40 30,100 100,40 100,100 0,100")
+  //- svg.header__svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none")
+  //-   polygon(fill="white" points="30,100 100,40 100,100")
+  //-   polygon(fill="white" points="0,40 30,100 0,100")
+  //-   polygon(fill="white" points="0,40 30,100 100,40 100,100 0,100")
+  //-   polygon(fill="white" points="0,40 30,100 100,40 100,100 0,100")
   //- svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none")
   //-   polygon(fill="white" points="0,40 30,100 0,100")

@@ -3,3 +3,7 @@ mixin skill-card_m(imgSrc, altText)
     span 
     .skill-card__content-wrapper
       img.skill-card__icon(src=imgSrc, alt=altText)
+
+mixin navigation-link(item)
+   li.nav__link
+      a.nav__item(href=item)= item
