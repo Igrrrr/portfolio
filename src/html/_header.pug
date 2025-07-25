@@ -1,5 +1,5 @@
 include _mixins.pug
-//- include _variables.pug
+include _variables.pug
 
 header.header 
   .container.header__container
@@ -20,10 +20,9 @@ header.header
         //-   span.burger__switch_big-symbol
         //-     |]
       ul.nav__list 
-        +navigation-link('About')
-        +navigation-link('Skills')
-        +navigation-link('Projects')
-        +navigation-link('Contacts')
+        each item in navigationList
+          +navigation-link(item)
+
         //- li.nav__link
         //-   a.nav__item(href="about")
         //-     |About 

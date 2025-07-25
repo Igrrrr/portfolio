@@ -1,9 +1,26 @@
-mixin skill-card_m(imgSrc, altText)
+mixin navigation-link(item)
+   li.nav__link
+      a.nav__item(href=item)= item
+
+mixin skill-card(imgSrc, altText)
   .skill-card 
     span 
     .skill-card__content-wrapper
       img.skill-card__icon(src=imgSrc, alt=altText)
 
-mixin navigation-link(item)
-   li.nav__link
-      a.nav__item(href=item)= item
+mixin project-card(imgSrc, imgAlt, cardTitle, cardDescription, techStack, githubLink)
+  .card
+    .card__img-container
+      img.card__img(src=imgSrc, alt=imgAlt)
+    .card__specification 
+      h2.card__title= cardTitle
+      //- h3.card__description= !{cardDescription}
+      h3.card__skills 
+        b 
+          |Tech stack: 
+        | #{techStack}
+      .card__link 
+        a.card__icon-link(href=githubLink target="blanc")
+          img.card__icon-picture(src="@img/ghblack.svg", alt="github")
+        a.card__text-link(href=githubLink target="blanc")
+            |Repositoriy

@@ -1,5 +1,5 @@
-include _mixins.pug
-include _variables.pug
+//- include _mixins.pug
+//- include _variables.pug
 
 section.skills 
   .container
@@ -7,5 +7,5 @@ section.skills
       |My tech stack
     .skills__icons-container 
       each skill in skillsList
-        +skill-card_m(skill.src, skill.alt)
+        +skill-card(skill.src, skill.alt)
   
