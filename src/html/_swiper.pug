@@ -1,17 +1,37 @@
-.container.projects.swiper__container 
-  h2.title
-    |Projects
-  .swiper 
-    .swiper-wrapper.projects__cards-container
-      each project in projectCardContent
-        +project-card(
-          project.imgSrc, 
-          project.imgAlt, 
-          project.cardTitle, 
-          project.cardDescription, 
-          project.techStack, 
-          project.githubLink
-        ).swiper-slide
+.projects
+  .container 
+    h2.title
+      |Projects
+    .swiper__container.swiper
+      .swiper-wrapper.projects__cards-container
+        each project in projectCardContent
+          +project-card(
+            project.imgSrc, 
+            project.imgAlt, 
+            project.cardTitle, 
+            project.cardDescription, 
+            project.techStack, 
+            project.githubLink,
+            'swiper-slide'
+          )
+
+//- .container.projects.swiper__container 
+//-   h2.title
+//-     |Projects
+//-   .swiper 
+//-     .swiper-wrapper.projects__cards-container
+//-       each project in projectCardContent
+//-         +project-card(
+//-           project.imgSrc, 
+//-           project.imgAlt, 
+//-           project.cardTitle, 
+//-           project.cardDescription, 
+//-           project.techStack, 
+//-           project.githubLink
+//-         ).swiper-slide
+
+
+
       //- .card.swiper-slide
       //-   .card__img-container
       //-     img.card__img(src="@img/insur.png", alt="insurance")

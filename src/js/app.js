@@ -6,6 +6,8 @@ const dialog = document.querySelector(".modal");
 const closeModal = document.querySelector(".modal__close-button");
 const cardContainer = document.querySelector(".projects__cards-container");
 
+new Swiper(".image-slider");
+
 new Swiper(".swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
@@ -30,7 +32,7 @@ new Swiper(".swiper", {
 
   // slidesPerView: 3,
 
-  // spaceBetween: 30,
+  spaceBetween: 30,
 
   breakpoints: {
     // 992: {

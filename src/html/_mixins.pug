@@ -8,8 +8,8 @@ mixin skill-card(imgSrc, altText)
     .skill-card__content-wrapper
       img.skill-card__icon(src=imgSrc, alt=altText)
 
-mixin project-card(imgSrc, imgAlt, cardTitle, cardDescription, techStack, githubLink)
-  .card
+mixin project-card(imgSrc, imgAlt, cardTitle, cardDescription, techStack, githubLink, extraClass)
+  .card(class=extraClass)
     .card__img-container
       img.card__img(src=imgSrc, alt=imgAlt)
     .card__specification 
