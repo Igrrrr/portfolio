@@ -14,7 +14,7 @@ mixin project-card(imgSrc, imgAlt, cardTitle, cardDescription, techStack, github
       img.card__img(src=imgSrc, alt=imgAlt)
     .card__specification 
       h2.card__title= cardTitle
-      //- h3.card__description= !{cardDescription}
+      h3.card__description !{cardDescription}
       h3.card__skills 
         b 
           |Tech stack: 
@@ -23,4 +23,4 @@ mixin project-card(imgSrc, imgAlt, cardTitle, cardDescription, techStack, github
         a.card__icon-link(href=githubLink target="blanc")
           img.card__icon-picture(src="@img/ghblack.svg", alt="github")
         a.card__text-link(href=githubLink target="blanc")
-            |Repositoriy
+            |Repository
