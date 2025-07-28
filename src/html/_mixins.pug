@@ -1,6 +1,16 @@
-mixin navigation-link(item)
+mixin list(listClass, linkClass, itemClass, imgClass, item='', imgSrc, imgAlt)
+  ul(class=listClass)
+    li(class=linkClass)
+      a(class=itemClass, href=item, target='_blank')= item
+         if imgSrc
+          img(class=imgClass, src=imgSrc, alt=imgAlt)
+
+
+mixin navigation-link(item, imgSrc, imgAlt)
    li.nav__link
-      a.nav__item(href=item)= item
+      a.nav__item(href=item, about='blank')= item
+        if imgSrc 
+          img.nav__icon(src=imgSrc, alt=imgAlt)
 
 mixin skill-card(imgSrc, altText)
   .skill-card 

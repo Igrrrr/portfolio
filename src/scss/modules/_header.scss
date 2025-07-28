@@ -7,11 +7,14 @@
 
   //position: relative;
 
-  position: fixed;
+  //position: fixed;
+
+  
+
+
   left: 0;
   top: 0;
   right: 0;
-  //background-color: red;
   padding: 1rem 0;
   z-index: 1;
 
@@ -65,7 +68,7 @@
   }
 
   &__external-icon {
-    width: 30px;
+    max-height: 30px;
     transition: transform 0.3s ease;
     transform: scale(1);
     
