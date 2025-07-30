@@ -1,9 +1,13 @@
-mixin list(listClass, linkClass, itemClass,  itemHref, item, imgClass, imgSrc, imgAlt)
+mixin list(listClass, array, linkClass, itemClass, imgClass)
   ul(class=listClass)
-    li(class=linkClass)
-      a(class=itemClass, href=itemHref, target='_blank')= item
-         if imgSrc
-          img(class=imgClass, src=imgSrc, alt=imgAlt)
+    each element in array
+      li(class=linkClass)
+        a(class=itemClass, href=element.href, target='_blank')
+          if element.imgSrc
+            img(class=imgClass, src=element.imgSrc, alt=element.imgAlt)
+          else 
+            | #{element}
+
 
 mixin skill-card(imgSrc, altText)
   .skill-card 
