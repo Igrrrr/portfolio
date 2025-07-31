@@ -1,11 +1,28 @@
+//- mixin list(listClass, array, linkClass, itemClass, imgClass)
+//-   ul(class=listClass)
+//-     each element in array
+//-       li(class=linkClass)
+//-         a(class=itemClass, href=element.href, target='_blank')
+//-           if element.imgSrc
+//-             img(class=imgClass, src=element.imgSrc, alt=element.imgAlt)
+//-           else 
+//-             | #{element}
+
 mixin list(listClass, array, linkClass, itemClass, imgClass)
   ul(class=listClass)
     each element in array
       li(class=linkClass)
-        a(class=itemClass, href=element.href, target='_blank')
-          if element.imgSrc
+        -
+          var hrefValue = '';
+          if (typeof element === 'string') {
+            hrefValue = '#' + element;
+          } else if (typeof element === 'object' && element !== null && element.href) {
+            hrefValue = element.href;
+          }
+        a(class=itemClass, href=hrefValue, target='_blank')
+          if (typeof element === 'object' && element !== null && element.imgSrc)
             img(class=imgClass, src=element.imgSrc, alt=element.imgAlt)
-          else 
+          else
             | #{element}
 
 
