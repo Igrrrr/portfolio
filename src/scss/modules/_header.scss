@@ -21,9 +21,9 @@
 
  
 
-  & * {
-    display: flex;
-  }
+  // & * {
+  //   display: flex;
+  // }
 
   // &::after {
   //   position: absolute;
@@ -39,6 +39,7 @@
   // }
 
   &__container {
+    display: flex;
     align-items: center;
     justify-content: space-between;
 

@@ -6,10 +6,11 @@ header.header
     a.header__logo-link
       p.header__logo
         |[/<]
-    nav.nav
-      input.burger__toggle#burger-toggle(type="checkbox")
-      label.burger(for="burger-toggle")
-        span
+    include _navigation.pug
+    //- nav.nav
+    //-   input.burger__toggle#burger-toggle(type="checkbox")
+    //-   label.burger(for="burger-toggle")
+    //-     span
         //- .burger__switch
         //-   span.burger__switch_big-symbol 
         //-     |[
@@ -32,12 +33,12 @@ header.header
       //-     item
       //-   )
 
-      +list(
-        'nav__inner-links-list', 
-        navigationList,
-        'nav__inner-link', 
-        'nav__inner-item', 
-      )
+      //- +list(
+      //-   'nav__inner-links-list', 
+      //-   navigationList,
+      //-   'nav__inner-link', 
+      //-   'nav__inner-item', 
+      //- )
 
         //- li.nav__link
         //-   a.nav__item(href="about")
@@ -67,13 +68,14 @@ header.header
       //-     item.imgSrc, 
       //-     item.imgAlt)
 
-      +list(
-        'nav__external-links-list', 
-        externalLinks,
-        'nav__external-link', 
-        'nav__external-item',
-        'nav__external-icon', 
-      )
+      //- +list(
+      //-   'nav__external-links-list', 
+      //-   externalLinks,
+      //-   'nav__external-link', 
+      //-   'nav__external-item',
+      //-   'nav__external-icon', 
+      //- )
+
       //- ul.header__external-links 
       //-   li.header__external-item
       //-     a.header__external-link(href="https://github.com/Igrrrr" about="blank")
