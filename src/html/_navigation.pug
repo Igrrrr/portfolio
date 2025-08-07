@@ -3,16 +3,17 @@ nav.nav
     input.burger__toggle#burger-toggle(type="checkbox")
     label.burger(for="burger-toggle")
       span
-    +list(
-      'nav__inner-links-list', 
-      navigationList,
-      'nav__inner-link', 
-      'nav__inner-item', 
-    )
-    +list(
-      'nav__external-links-list', 
-      externalLinks,
-      'nav__external-link', 
-      'nav__external-item',
-      'nav__external-icon', 
-    )
+    .nav__lists-container
+      +list(
+        'nav__inner-links-list', 
+        navigationList,
+        'nav__inner-link', 
+        'nav__inner-item', 
+      )
+      +list(
+        'nav__external-links-list', 
+        externalLinks,
+        'nav__external-link', 
+        'nav__external-item',
+        'nav__external-icon', 
+      )
